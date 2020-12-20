@@ -2,8 +2,6 @@
 
 Projeto com implementação de arquitetura DDD.
 
-[Mais informações](https://github.com/superainovacoes/desenvolvedor_fullstack)
-
 ## Banco de Dados
 
 O banco de dados foi criado utilizando migrations.
