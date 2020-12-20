@@ -1,6 +1,6 @@
 # Resumo
 
-Projeto referente a uma vaga de desenvolvedor fullstack pleno na empresa SiteMercado.
+Projeto com implementação de arquitetura DDD.
 
 [Mais informações](https://github.com/superainovacoes/desenvolvedor_fullstack)
 
