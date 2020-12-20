@@ -1,0 +1,44 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Listagem</mat-card-title>
+    </mat-card-header>
+    <div class="body">
+      <mat-card-content>
+        <div *ngIf="produtos?.length">
+          <table class="table table-striped">
+            <thead>
+              <tr class="text-center">
+                <th>Imagem</th>
+                <th>Nome</th>
+                <th>Valor</th>
+                <th>Detalhes</th>
+                <th>Excluir</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let obj of produtos; let last = last;">
+                <td class="text-center" [id]="'imgTest1' + obj.id"></td>
+                <td class="text-center">{{ obj.nome }}</td>
+                <td class="text-center">{{ converteValor(obj.valorVenda) }}</td>
+                <td class="text-center">
+                  <mat-icon class="pointer" matTooltip="Detalhes" (click)="detalhes(obj.id)">search</mat-icon>
+                </td>
+                <td class="text-center">
+                  <mat-icon class="pointer" matTooltip="Excluir" (click)="excluir(obj.id)">delete</mat-icon>
+                </td>
+                <span *ngIf="last">{{ gerarMini() }}</span>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h5 *ngIf="!produtos?.length" class="text-center"><br>Nenhum registro encontrado</h5>
+
+        <div class="botao-card-pagina">
+          <button mat-stroked-button color="primary" class="btn-block" (click)="cadastrar()">Cadastrar</button>
+        </div>
+      </mat-card-content>
+    </div>
+  </mat-card>
+</div>

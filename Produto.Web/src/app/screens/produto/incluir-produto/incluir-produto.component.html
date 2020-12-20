@@ -1,0 +1,40 @@
+<div class="container" fxLayout="row" fxLayoutAlign="center center" style="padding: 0 !important;">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>{{id > 0 ? "Editar" : "Incluir"}} Produto</mat-card-title>
+    </mat-card-header>
+    <form [formGroup]="formProduto" class="body" (ngSubmit)="salvar()">
+      <mat-card-content>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Nome do Produto" type="text" formControlName="nome" focus>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Valor de Venda" type="text" (blur)="formatarMoeda($event);"
+            (keyup)="formatarMoeda($event)" formControlName="valorVenda">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-toolbar>
+
+            <!-- Readonly Input to show File names -->
+            <input matInput [value]="formProduto.value.imagem ? 'Imagem Selecionada' : 'Selecione...'" readonly
+              name="memberContactNo" />
+
+            <!-- Browse Button -->
+            <button mat-flat-button color="primary">
+              Browse
+            </button>
+
+          </mat-toolbar>
+
+          <!-- Fetch selected filed on change -->
+          <input type="file" #UploadFileInput id="fileUpload" (change)="getFile($event)" name="fileUpload"
+            multiple="multiple" accept="image/*" />
+        </mat-form-field>
+
+        <button mat-stroked-button color="primary" class="btn-block">Salvar</button>
+      </mat-card-content>
+    </form>
+  </mat-card>
+</div>

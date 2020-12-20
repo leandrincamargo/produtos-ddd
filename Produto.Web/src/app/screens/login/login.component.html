@@ -1,0 +1,21 @@
+<div class="container" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box" style="max-width: 330px;">
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <form [formGroup]="formLogin" class="body" (ngSubmit)="logar()">
+      <mat-card-content>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="CPF" type="text" formControlName="cpf" mask="999.999.999-99" focus>
+        </mat-form-field>
+
+
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Senha" id="senha" type="password" formControlName="senha">
+        </mat-form-field>
+
+        <button mat-stroked-button color="primary" class="btn-block">Entrar</button>
+      </mat-card-content>
+    </form>
+  </mat-card>
+</div>

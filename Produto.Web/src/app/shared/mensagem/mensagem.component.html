@@ -1,0 +1,14 @@
+<div class="row">
+  <mat-icon class="col-1">{{icone}}</mat-icon>
+  <div class="col-10">
+    <div *ngIf="!ehArray" class="snackbar">
+      <span>{{ mensagem.texto }}</span>
+    </div>
+    <div *ngIf="ehArray" class="snackbar">
+      <span *ngFor="let texto of mensagem.texto">{{ texto }}<br></span>
+    </div>
+  </div>
+  <div>
+    <button type="button" class="close" (click)="dismiss()">&times;</button>
+  </div>
+</div>

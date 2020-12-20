@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+  background-color: #e2e2e2;
+  color: #233140;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-primary-background);
+  overflow-y: hidden;
+}
+
+body,
+input,
+button,
+textarea {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #233140;
+}
+
+.mat-dialog-container {
+  padding: 0px !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.box {
+  position: relative;
+  top: 0;
+  opacity: 1;
+  float: left;
+  padding: 60px 50px 40px 50px;
+  width: 100%;
+  background: #fff;
+  margin-top: 10px;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  max-width: 800px;
+}
+
+/*#region CONFIG snackbar */
+.snackbar-alerta {
+  background-color: #f89406;
+}
+
+.snackbar-sucesso {
+  background-color: #51a351;
+}
+
+.snackbar-info {
+  background-color: #2f96b4;
+}
+
+.snackbar-erro {
+  background-color: #bd362f;
+}
+/*#endregion snackbar */
+
+.app-header {
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+    0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+.container {
+  height: 100%;
+}
+
+.container .body {
+  min-width: 100%;
+  max-width: 300px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.container .full-width,
+.container .btn-block {
+  width: 100%;
+}
+
+.container mat-card-header {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-weight: 700;
+}
+
+.container mat-card-header mat-card-title {
+  font-size: 30px;
+  margin: 0;
+}
+
+.container .mat-card {
+  padding: 40px 70px 50px;
+}
+
+.container .mat-stroked-button {
+  border: 1px solid currentColor;
+  line-height: 54px;
+  background: #fff7fa;
+}
+
+.container .mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0.8375em 0;
+}

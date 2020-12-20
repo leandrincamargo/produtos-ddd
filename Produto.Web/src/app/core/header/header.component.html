@@ -1,0 +1,9 @@
+<div class="header">
+  <button mat-button class="header-home" (click)="router.navigate(['produtos'])">
+    <span class="header-text">Produtos</span>
+  </button>
+
+  <button mat-button matTooltip="Sair" (click)="loginService.logout()">
+    <mat-icon class="icone-header">logout</mat-icon>
+  </button>
+</div>

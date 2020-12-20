@@ -1,0 +1,14 @@
+<div class="card-dialog">
+  <div class="card-header">{{titulo}}</div>
+  <div class="card-body text-center">
+    <label id="texto"></label>
+    <div style="display: flex; justify-content: space-around;">
+      <button type="button" (click)="btnTrue()" class="btn btn-success botao">
+        <i class="nc-check-1"></i> {{botaoTrue}}
+      </button>
+      <button *ngIf="!esconderFalse" type="button" (click)="btnFalse()" class="btn btn-danger botao">
+        <i class="nc-cancel"></i> {{botaoFalse}}
+      </button>
+    </div>
+  </div>
+</div>
